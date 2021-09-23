@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="HOME"
+            android:icon="@drawable/ic_home"/>
+
+        <item
+            android:id="@+id/nav_data"
+            android:title="DATA"
+            android:icon="@drawable/ic_data"/>
+
+    </group>
+
+    <item android:title="USERS">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_op"
+                    android:title="Operators"
+                    android:icon="@drawable/ic_op"/>
+                <item
+                    android:id="@+id/nav_adm"
+                    android:title="Administrators"
+                    android:icon="@drawable/ic_admin"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="ACCOUNT">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/ic_logout"/>
+
+            </group>
+        </menu>
+    </item>
+</menu>

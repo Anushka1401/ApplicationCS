@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_sort"
+        android:title="SORT"
+        android:id="@+id/menu_sort"
+        app:showAsAction="always">
+        <menu>
+
+    <item android:title="DATE">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/menu_dateasc"
+                    android:title="Ascending"/>
+                <item
+                    android:id="@+id/menu_datedesc"
+                    android:title="Descending" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="ID">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/menu_idasc"
+                    android:title="Ascending"/>
+                <item
+                    android:id="@+id/menu_iddesc"
+                    android:title="Descending" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="NAME">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/menu_nameasc"
+                    android:title="Ascending"/>
+                <item
+                    android:id="@+id/menu_namedesc"
+                    android:title="Descending" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="TEMPERATURE">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/menu_tempasc"
+                    android:title="Ascending"/>
+                <item
+                    android:id="@+id/menu_tempdesc"
+                    android:title="Descending" />
+            </group>
+        </menu>
+    </item>
+
+        </menu>
+    </item>
+</menu>

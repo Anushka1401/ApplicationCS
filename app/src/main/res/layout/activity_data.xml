@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Admin"
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <com.google.android.material.navigation.NavigationView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/navigation_view"
+       android:background="@color/light"
+       android:theme="@style/navigationTheme"
+       android:layout_gravity="start"
+       app:headerLayout="@layout/menu_header"
+       app:menu="@menu/main_menu"/>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startdate"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:hint="Start Date"
+            android:textColor="@color/babyblue"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/to"
+            android:text="  to  "
+            android:layout_toRightOf="@+id/startdate"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/to"
+            android:hint="Last Date"
+            android:text=""
+            android:textColor="@color/babyblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/visualise"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="✓"
+            style="@style/greenButton"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="3dp"
+            android:onClick="sendMessageToFragment"
+            />
+
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/darker_gray">
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TABLE" />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabGraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GRAPH"
+        />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/tabPie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTHER" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_layout"/>
+</LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
